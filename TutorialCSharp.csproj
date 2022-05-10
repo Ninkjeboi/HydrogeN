@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BB225051-ADDF-4F8D-BD89-BDBBDECB3137}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>TutorialCSharp</RootNamespace>
+    <AssemblyName>TutorialCSharp</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FontAwesome.Sharp, Version=5.15.4.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
+      <HintPath>packages\FontAwesome.Sharp.5.15.4\lib\net472\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\roundedPicturebox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\Descriptions\CSGO Description.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Descriptions\CSGO Description.Designer.cs">
+      <DependentUpon>CSGO Description.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Descriptions\GTA Description.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Descriptions\GTA Description.Designer.cs">
+      <DependentUpon>GTA Description.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Descriptions\ROBLOX Description.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Descriptions\ROBLOX Description.Designer.cs">
+      <DependentUpon>ROBLOX Description.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Games\CSGO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Games\CSGO.Designer.cs">
+      <DependentUpon>CSGO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Games\GTA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Games\GTA.Designer.cs">
+      <DependentUpon>GTA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Games\ROBLOX.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Games\ROBLOX.Designer.cs">
+      <DependentUpon>ROBLOX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Games\Subpanels\CSGO\Legitbot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Games\Subpanels\CSGO\Legitbot.Designer.cs">
+      <DependentUpon>Legitbot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Games\Subpanels\CSGO\Visuals.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Games\Subpanels\CSGO\Visuals.Designer.cs">
+      <DependentUpon>Visuals.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Loader\Loader.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Loader\Loader.Designer.cs">
+      <DependentUpon>Loader.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\Descriptions\CSGO Description.resx">
+      <DependentUpon>CSGO Description.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Descriptions\GTA Description.resx">
+      <DependentUpon>GTA Description.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Descriptions\ROBLOX Description.resx">
+      <DependentUpon>ROBLOX Description.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Games\CSGO.resx">
+      <DependentUpon>CSGO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Games\Subpanels\CSGO\Legitbot.resx">
+      <DependentUpon>Legitbot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Games\Subpanels\CSGO\Visuals.resx">
+      <DependentUpon>Visuals.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Loader\Loader.resx">
+      <DependentUpon>Loader.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="GUI\Games\Subpanels\GTA\" />
+    <Folder Include="GUI\Games\Subpanels\ROBLOX\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
